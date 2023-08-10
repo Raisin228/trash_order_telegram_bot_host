@@ -8,7 +8,6 @@ from admi_states import AdminStatesGroup
 from ainlinekb import link_in_button_adv
 from areplykb import *
 from ureplykb import user_start_keyboard
-from main import bot
 from sqlite import quantity_admins, create_admin, \
     chose_admin_password, get_user_password, get_events_from_db, del_event_in_db, \
     create_menu, get_dishes_from_db, del_dish_in_db, write_event_to_db, get_admin_cafe_id, \
@@ -277,12 +276,12 @@ async def show_ads(message: types.Message, state: FSMContext) -> None:
         data = user_data
     # показываем без ссылки если её нет
     if data['link'] == '-':
-        await bot.send_photo(chat_id=message.from_user.id, photo=data['e_photo'],
+        await message.bot.send_photo(chat_id=message.from_user.id, photo=data['e_photo'],
                              caption=f'<b>Название события:</b> {data["e_name"]}\n<b>Дата:</b> {data["e_date"]}\n'
                                      f'<b>Описание:</b> {data["e_descript"]}', parse_mode='html',
                              reply_markup=right_anket())
     else:
-        await bot.send_photo(chat_id=message.from_user.id, photo=data['e_photo'],
+        await message.bot.send_photo(chat_id=message.from_user.id, photo=data['e_photo'],
                              caption=f'<b>Название события:</b> {data["e_name"]}\n<b>Дата:</b> {data["e_date"]}\n'
                                      f'<b>Описание:</b> {data["e_descript"]}', parse_mode='html',
                              reply_markup=link_in_button_adv(data['link']))
@@ -437,7 +436,7 @@ async def show_dish(message: types.Message, state: FSMContext) -> None:
     async with state.proxy() as user_data:
         data = user_data
     # показываем
-    await bot.send_photo(chat_id=message.from_user.id, photo=data['product_photo'],
+    await message.bot.send_photo(chat_id=message.from_user.id, photo=data['product_photo'],
                          caption=f'<b>Название:</b> {data["product_name"]}\n<b>Цена:</b> {data["price"]}\n'
                                  f'<b>Описание товара:</b> {data["product_descript"]}',
                          parse_mode='html', reply_markup=right_anket())
