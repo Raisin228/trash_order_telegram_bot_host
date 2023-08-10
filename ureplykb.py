@@ -1,5 +1,5 @@
 from aiogram.types import ReplyKeyboardMarkup, KeyboardButton
-from order_telegram_bot.sqlite_bot.sqlite import menu_positions, get_basket_data
+from sqlite import menu_positions, get_basket_data
 
 
 def user_start_keyboard(user_id) -> ReplyKeyboardMarkup:
