@@ -1,7 +1,7 @@
 # сами обработчики администратора
 from datetime import datetime
 
-from aiogram import types
+from aiogram import types, Bot
 from aiogram.dispatcher import FSMContext
 from aiogram.types import ReplyKeyboardRemove
 
