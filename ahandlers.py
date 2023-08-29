@@ -5,14 +5,14 @@ from aiogram import types
 from aiogram.dispatcher import FSMContext
 from aiogram.types import ReplyKeyboardRemove
 
-from order_telegram_bot.bot.config import *
-from order_telegram_bot.bot.handlers.admin.admi_states import AdminStatesGroup
-from order_telegram_bot.bot.keyboards.admin.inlinekb import link_in_button_adv
-from order_telegram_bot.bot.keyboards.admin.replykb import *
-from order_telegram_bot.bot.keyboards.user.replykb import user_start_keyboard
-from order_telegram_bot.bot.main import bot
-from order_telegram_bot.bot.other import generate_pass
-from order_telegram_bot.sqlite_bot.sqlite import quantity_admins, create_admin, \
+from config import *
+from admi_states import AdminStatesGroup
+from ainlinekb import link_in_button_adv
+from areplykb import *
+from ureplykb import user_start_keyboard
+from main import bot
+from other import generate_pass
+from sqlite import quantity_admins, create_admin, \
     chose_admin_password, get_user_password, get_events_from_db, del_event_in_db, \
     create_menu, get_dishes_from_db, del_dish_in_db, write_event_to_db, get_admin_id, update_right_password
 
