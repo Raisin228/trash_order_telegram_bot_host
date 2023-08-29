@@ -5,9 +5,9 @@ from aiogram.contrib.fsm_storage.memory import MemoryStorage
 from aiogram.dispatcher.filters import Text
 from aiogram.types import ContentType
 
-from handlers.admin.ahandlers import *
-from handlers.user.uhandlers import *
-from order_telegram_bot.sqlite_bot.sqlite import *
+from ahandlers import *
+from uhandlers import *
+from sqlite import *
 from other import my_pred, is_good_link
 
 
