@@ -10,11 +10,13 @@ from admi_states import AdminStatesGroup
 from ainlinekb import link_in_button_adv
 from areplykb import *
 from ureplykb import user_start_keyboard
-from main import bot
+from uhandlers import TOKEN
 from other import generate_pass
 from sqlite import quantity_admins, create_admin, \
     chose_admin_password, get_user_password, get_events_from_db, del_event_in_db, \
     create_menu, get_dishes_from_db, del_dish_in_db, write_event_to_db, get_admin_id, update_right_password
+
+bot = Bot(token=TOKEN)
 
 """Всякие обработчики отмены и возврата"""
 
