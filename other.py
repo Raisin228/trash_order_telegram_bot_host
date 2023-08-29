@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 
 import requests
 
-from order_telegram_bot.sqlite_bot.sqlite import get_right_pass
+from sqlite import get_right_pass
 
 
 def my_pred(s: str) -> bool:
