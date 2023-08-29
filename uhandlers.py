@@ -7,13 +7,13 @@ from aiogram import types
 from aiogram.dispatcher import FSMContext
 from dotenv import load_dotenv
 
-from order_telegram_bot.bot.config import *
-from order_telegram_bot.bot.handlers.user.user_states import UserMenuStatesGroup
-from order_telegram_bot.bot.keyboards.admin.replykb import cancelkb
-from order_telegram_bot.bot.keyboards.user.inlinekb import *
-from order_telegram_bot.bot.keyboards.user.replykb import *
-from order_telegram_bot.bot.other import *
-from order_telegram_bot.sqlite_bot.sqlite import *
+from config import *
+from user_states import UserMenuStatesGroup
+from areplykb import cancelkb
+from uinlinekb import *
+from ureplykb import *
+from other import *
+from sqlite import *
 
 # забираем токены из .env
 load_dotenv()
